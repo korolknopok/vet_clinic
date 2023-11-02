@@ -4,15 +4,12 @@ export default function Header() {
   return (
     <header>
         <div>
-            <span className='logo'>REKS</span>
-            <ul className='nav'>
-              <li>Про нас</li>
-              <li>Услуги</li>
-              <li>Отзывы</li>
-              <li>Ветеринары</li>
-            </ul>
+            {/* <div className='logo'>
+              REKS
+            </div> */}
         </div>
-        <div className='presentation'></div>
+        {/* <div className='presentation'></div> */}
+        
     </header>
   )
 }

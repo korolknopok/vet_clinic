@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300;1,600&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap');
 
 *{
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     background: #fff;
     color: #000000;
     font-family: 'Montserrat', sans-serif;
@@ -15,43 +14,163 @@ body{
 }
 
 .wrapper {
-    width: 1280px;
-    margin: 40px auto;
+    width: 1920x;
+    margin: 40px 40px;
+    margin-left: 0;
 }
 
-header .logo {
+.logo {
+    
+    margin-left: 10px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: left;
     font-weight: 600;
-    font-size: 50px;
-    color: #00c21a;
+    font-size:35px;
+    color: rgb(19, 218, 191);
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
-header ul.nav {
-    float: right;
-    list-style: none;
+.presentation {
+    margin: 50px 0;
+    background: url('../img/dogLast.jpeg') no-repeat;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode: multiply;
+    transform: scale(-1,1);
+    
 }
 
-header ul.nav li {
-    display: inline;
-    font-size: 30px;
-    margin-left: 50px;
+.flex-container {
+    font-size: 22px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    
+}
+
+.flex-items {
+    
+    font-weight: 100;
+    margin: 5px;
+    display: flex;
+    color: #151818;
     cursor: pointer;
     transition: opacity 500ms ease;
 }
 
-header ul.nav li:hover {
+.flex-items:hover {
     opacity: 0.5;
 }
 
-header .presentation {
-    margin: 50px 0;
-    background: url('../img/dogLast.jpeg') no-repeat;
-    width: 100%;
-    height: 1000px;
-    background-size: cover;
-    background-position: center center;
-    background-blend-mode: multiply;
+.flex-navigation{
+    color: #151818;
+    margin: 5px;
+}
+
+.flex-navigation item-4 {
+    float: right;
+    color:#00c21a;
+    transform: scale(2);
+}
+
+.styleIcons {
+    font-size: 20px;
+    color: rgb(19, 218, 191);
+}
+
+.headerleft {
+    display: flex;
+    justify-content: flex-start;
+    white-space: nowrap;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.headerright {
+    margin-right: 30px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    white-space: nowrap;
+    flex-direction: row;
     
 }
 
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    white-space: nowrap;
+    
+}
 
+.labelmetod {
+    
+    color: #dd1414;
+    padding: 50px;
+    background-color: #ffa7a7;
+    margin-top: 100px;
+    height: 4rem;
+    border-radius: 1.6rem;
+    -webkit-border-radius: 1.6rem;
+    -moz-border-radius: 1.6rem;
+    -ms-border-radius: 1.6rem;
+    -o-border-radius: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 1rem;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 100%;
+    
+}
 
+.labelmetod ul {
+    color: white;
+    padding: 0 1rem;
+    background-color: rgb(182, 38, 38);
+    border-radius: 1.6rem;
+    -webkit-border-radius: 1.6rem;
+    -moz-border-radius: 1.6rem;
+    -ms-border-radius: 1.6rem;
+    -o-border-radius: 1.6rem;
+    margin-right: 10px;
+}
+
+.labelvetclinic {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.labeltext {
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.RecordButton{
+    background-color: rgb(19, 218, 191);
+    margin-top: 40px;
+    height: 4rem;
+    padding: 0 1rem;
+    border-radius: 1.6rem;
+    -webkit-border-radius: 2.2rem;
+    -moz-border-radius: 2.2rem;
+    -ms-border-radius: 2.2rem;
+    -o-border-radius: 2.2rem;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 4rem;
+    font-size: 1rem;
+    line-height: 100%;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
