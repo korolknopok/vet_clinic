@@ -1,6 +1,6 @@
-import React from "react"
 import Footer from "./components/Footer";
-import MenuBar from "./components/MenuBar";
+import Header from "./components/Header";
+import Content from "./components/Content";
 import './css/index.css';
 
 
@@ -8,9 +8,11 @@ import './css/index.css';
 function App() {
     return (
         <div className="wrapper">
-            <MenuBar />
+            <Header />
+            <Content />
+            
             <Footer />
-
+            
         </div>
     );
 }
