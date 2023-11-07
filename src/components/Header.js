@@ -1,8 +1,11 @@
 import React from 'react'
+
 import { AiFillClockCircle, AiFillPhone, AiFillEnvironment} from 'react-icons/ai'
 
 
 export default function Header() {
+  
+
   return (
     <div className='column'>
       <div className='header row'>  
@@ -15,6 +18,13 @@ export default function Header() {
               <div className='flex-items item-1'> Про нас </div>
               <div className='flex-items item-2'> Отзывы </div>
               <div className='flex-items item-3'> Ветеринары </div>
+              <div className='ActiveButton' id = 'button-group'>
+                <input type='radio' value = '1' name = 'button-group' id = 'btn1'/>
+                 <label htmlFor='btn1'>
+                    Записи 
+                 </label>
+                 
+              </div>
             
         </div>
         <div className='headerright'>

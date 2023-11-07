@@ -293,3 +293,38 @@ body {
     transition: background-color .8s linear;
 }
     
+.ActiveButton {
+    display: flex;
+    color: #151818;
+    cursor: pointer;
+    transition: opacity 500ms ease;
+}
+
+.ActiveButton:hover {
+    opacity: 0.5;
+}
+
+#button-group > input {
+    display: none;
+}
+
+#button-group > label {
+    padding: 5px;
+    background-color: transparent;
+    height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#button-group > label:hover {
+    background-color: #EBEBEB ;
+}
+
+#button-group > label:active {
+    background-color: #05eeee;
+}
+
+#button-group > input[type='radio']:checked + label{
+    background-color: #03dfba;
+    color: white
+}
