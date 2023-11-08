@@ -3,6 +3,7 @@ import React from 'react'
 import { AiFillClockCircle, AiFillPhone, AiFillEnvironment} from 'react-icons/ai'
 
 
+
 export default function Header() {
   
 
@@ -20,9 +21,9 @@ export default function Header() {
               <div className='flex-items item-3'> Ветеринары </div>
               <div className='ActiveButton' id = 'button-group'>
                 <input type='radio' value = '1' name = 'button-group' id = 'btn1'/>
-                 <label htmlFor='btn1'>
-                    Записи 
-                 </label>
+                  <label htmlFor='btn1'>
+                    Про нас
+                  </label>
                  
               </div>
             
@@ -37,3 +38,5 @@ export default function Header() {
     </div>
   )
 }
+
+
