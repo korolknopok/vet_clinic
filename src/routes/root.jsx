@@ -19,7 +19,7 @@ export default function Root() {
           <nav>
             <ul>
               <li className='ActiveButton' onClick={() => setModalActive(true)}>
-                <Link to={`contacts/1`}>Записи</Link>
+                <Link to={`records`}>Записи</Link>
               </li>
             </ul>
           </nav>

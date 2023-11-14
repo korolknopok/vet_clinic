@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Outlet, Link } from "react-router-dom";
 import { AiFillClockCircle, AiFillPhone, AiFillEnvironment} from 'react-icons/ai'
 
 
@@ -16,15 +16,20 @@ export default function Header() {
                   REKS
                 </div>
               </div>
-              <div className='flex-items item-1'> Про нас </div>
+              <div className='flex-items item-1'>
+                <Link to={`contacts/2`}>Про нас</Link>
+              </div>
               <div className='flex-items item-2'> Отзывы </div>
               <div className='flex-items item-3'> Ветеринары </div>
               <div className='ActiveButton' id = 'button-group'>
                 <input type='radio' value = '1' name = 'button-group' id = 'btn1'/>
                   <label htmlFor='btn1'>
-                    Про нас
+                    <Link to={`contacts/1`}>Записи</Link>
                   </label>
                  
+              </div>
+              <div id="detail">
+                <Outlet />
               </div>
             
         </div>

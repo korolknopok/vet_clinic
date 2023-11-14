@@ -5,6 +5,7 @@ import Header from "./components/Header.jsx";
 import Content from "./components/Content";
 import './css/index.css';
 import {
+  BrowserRouter,
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
@@ -14,10 +15,10 @@ import Contact from "./routes/contact";
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <Root/>,
+      element: <Header/>,
       children: [
         {
-            path: "contacts/:contactId",
+            path: "contacts/:contactId", 
             element: <Contact />,
         },
       ], 
@@ -26,15 +27,14 @@ const router = createBrowserRouter([
 
 function App() {
     return (
+      
+      
         <div className="wrapper">
-            <Header />
-            <Content />
             <RouterProvider router={router} />
+            <Content />
             <Footer />
-            
-          
-            
         </div>
+    
     );
 }
 
