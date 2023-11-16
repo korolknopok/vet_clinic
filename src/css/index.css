@@ -330,3 +330,26 @@ body {
 }
 
 
+/* .a {
+    color: darkgoldenrod
+}
+
+.bottom a:visited, a.focus, a:hover {
+    font-weight: bold;
+    background: var(--black-150);
+    color: var(--black-600);
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    background: #05eeee;
+} */
+.link {
+    color:#000000;
+    text-decoration: none;
+}
+.botton {
+    background-color: #03dfba;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
+}

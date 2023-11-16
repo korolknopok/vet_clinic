@@ -11,33 +11,34 @@ import {
 } from "react-router-dom";
 import Root from "./routes/root"
 import Contact from "./routes/contact";
+import {Route, Link, Routes} from 'react-router-dom';
 
-const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Header/>,
-      children: [
-        {
-            path: "contacts/:contactId", 
-            element: <Contact />,
-        },
-      ], 
-    },
-  ]);
-
-function App() {
-    return (
-      
-      
-        <div className="wrapper">
-            <RouterProvider router={router} />
-            <Content />
-            <Footer />
-        </div>
+export default function App() {
+  return (
     
-    );
+    <>
+      <Header />
+      <nav>
+        <ul>
+          <li>
+            
+          </li>
+          <li>
+            
+          </li>	
+        </ul>
+      </nav>
+
+      <Routes>
+        
+        <Route path="/" element={<Content />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </>
+    
+  );
 }
 
 
-export default App;
+
 

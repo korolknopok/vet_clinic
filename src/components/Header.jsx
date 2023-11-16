@@ -5,8 +5,11 @@ import { AiFillClockCircle, AiFillPhone, AiFillEnvironment} from 'react-icons/ai
 
 
 export default function Header() {
+  const [isClicked, setIsClicked] = React.useState('default');
   
-
+  function handleClick() {
+    setIsClicked(prevState => !prevState);
+  }
   return (
     <div className='column'>
       <div className='header row'>  
@@ -16,17 +19,22 @@ export default function Header() {
                   REKS
                 </div>
               </div>
-              <div className='flex-items item-1'>
-                <Link to={`contacts/2`}>Про нас</Link>
+              <div className='flex-items item-1' >
+                <div className={isClicked ? 'link botton' : 'link '} onClick={handleClick}>
+                  <a>
+                    <Link to="/">Про нас</Link>
+                  </a>
+                  
+                </div>
+                
+                
               </div>
               <div className='flex-items item-2'> Отзывы </div>
               <div className='flex-items item-3'> Ветеринары </div>
-              <div className='ActiveButton' id = 'button-group'>
-                <input type='radio' value = '1' name = 'button-group' id = 'btn1'/>
-                  <label htmlFor='btn1'>
-                    <Link to={`contacts/1`}>Записи</Link>
-                  </label>
-                 
+              <div className='flex-items item-1'>
+                <div className={isClicked ? '' : 'botton'} onClick={handleClick}>
+                  <Link to="/contact">Записи</Link>
+                </div>
               </div>
               <div id="detail">
                 <Outlet />
