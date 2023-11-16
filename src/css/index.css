@@ -346,10 +346,22 @@ body {
     color:#000000;
     text-decoration: none;
 }
+
+.link:focus{
+    background-color: #03dfba;
+}
 .botton {
     background-color: #03dfba;
 }
 
 a:-webkit-any-link {
     text-decoration: none;
+}
+
+.item.a {
+    color: #000000;
+}
+
+.item a.active {
+    background-color: #03dfba;
 }

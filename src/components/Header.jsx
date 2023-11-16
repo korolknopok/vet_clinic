@@ -1,15 +1,13 @@
 import React from 'react'
 import { Outlet, Link } from "react-router-dom";
 import { AiFillClockCircle, AiFillPhone, AiFillEnvironment} from 'react-icons/ai'
+import { NavLink } from "react-router-dom";
+
 
 
 
 export default function Header() {
-  const [isClicked, setIsClicked] = React.useState('default');
   
-  function handleClick() {
-    setIsClicked(prevState => !prevState);
-  }
   return (
     <div className='column'>
       <div className='header row'>  
@@ -20,11 +18,8 @@ export default function Header() {
                 </div>
               </div>
               <div className='flex-items item-1' >
-                <div className={isClicked ? 'link botton' : 'link '} onClick={handleClick}>
-                  <a>
-                    <Link to="/">Про нас</Link>
-                  </a>
-                  
+                <div className = 'item'>
+                  <NavLink to="/">Про нас</NavLink>
                 </div>
                 
                 
@@ -32,10 +27,13 @@ export default function Header() {
               <div className='flex-items item-2'> Отзывы </div>
               <div className='flex-items item-3'> Ветеринары </div>
               <div className='flex-items item-1'>
-                <div className={isClicked ? '' : 'botton'} onClick={handleClick}>
-                  <Link to="/contact">Записи</Link>
+                <div className = 'item'>
+                  <NavLink to="/contact">Записи</NavLink>
+                  
                 </div>
+                
               </div>
+              
               <div id="detail">
                 <Outlet />
               </div>
