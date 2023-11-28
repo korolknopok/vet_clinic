@@ -53,7 +53,7 @@ export default function Content() {
                             id="tel"
                             class="input"
                             />
-                            <button id="btn">Записаться</button>
+                            <button id="btn" >Записаться</button>
                         </form>
                     </div>
                 </div>

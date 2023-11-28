@@ -9,14 +9,19 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-import Root from "./routes/root"
+
 import Contact from "./routes/contact";
+import PostList from "./components/PostList";
 import {Route, Link, Routes} from 'react-router-dom';
+import { response } from 'express';
+import { json } from 'express';
+import e from 'express';
 
 export default function App() {
   return (
     
     <>
+      
       <Header />
       <nav>
         <ul>
@@ -26,13 +31,16 @@ export default function App() {
           <li>
             
           </li>	
+          <PostList />
         </ul>
+        
       </nav>
 
       <Routes>
         
         <Route path="/" element={<Content />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<Contact />}></Route>
+        
       </Routes>
     </>
     

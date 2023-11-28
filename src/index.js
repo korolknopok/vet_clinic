@@ -6,7 +6,6 @@ import {BrowserRouter} from 'react-router-dom';
 
 
 
-
 const app = ReactDOM.createRoot(document.getElementById("app"))
 
 

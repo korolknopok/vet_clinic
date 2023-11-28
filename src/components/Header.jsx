@@ -2,7 +2,7 @@ import React from 'react'
 import { Outlet, Link } from "react-router-dom";
 import { AiFillClockCircle, AiFillPhone, AiFillEnvironment} from 'react-icons/ai'
 import { NavLink } from "react-router-dom";
-
+import PostList from './PostList';
 
 
 
@@ -28,7 +28,10 @@ export default function Header() {
               <div className='flex-items item-3'> Ветеринары </div>
               <div className='flex-items item-1'>
                 <div className = 'item'>
-                  <NavLink to="/contact">Записи</NavLink>
+                  <NavLink to="/contact">
+                    Записи
+                    
+                  </NavLink>
                   
                 </div>
                 
