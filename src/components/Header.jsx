@@ -2,7 +2,7 @@ import React from 'react'
 import { Outlet, Link } from "react-router-dom";
 import { AiFillClockCircle, AiFillPhone, AiFillEnvironment} from 'react-icons/ai'
 import { NavLink } from "react-router-dom";
-import PostList from './PostList';
+
 
 
 

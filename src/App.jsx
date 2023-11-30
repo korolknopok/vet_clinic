@@ -9,9 +9,8 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-
+import Root from "./routes/root"
 import Contact from "./routes/contact";
-import PostList from "./components/PostList";
 import {Route, Link, Routes} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import List from "./components/List.js";
@@ -35,7 +34,6 @@ export default function App() {
           </li>	
           
         </ul>
-        
       </nav>
 
       <Routes>
