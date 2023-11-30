@@ -13,11 +13,13 @@ import {
 import Contact from "./routes/contact";
 import PostList from "./components/PostList";
 import {Route, Link, Routes} from 'react-router-dom';
-import { response } from 'express';
-import { json } from 'express';
-import e from 'express';
+import { useState, useEffect } from 'react';
+import List from "./components/List.js";
+
 
 export default function App() {
+  
+
   return (
     
     <>
@@ -31,7 +33,7 @@ export default function App() {
           <li>
             
           </li>	
-          <PostList />
+          
         </ul>
         
       </nav>
@@ -39,7 +41,7 @@ export default function App() {
       <Routes>
         
         <Route path="/" element={<Content />} />
-        <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/contact" element={<Contact />} />
         
       </Routes>
     </>
