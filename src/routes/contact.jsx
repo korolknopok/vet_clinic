@@ -8,6 +8,8 @@ import React, { Component } from 'react'
 function List() {
   const [data, setData] = useState([]);
 
+  
+
   useEffect(() => {
       fetch('https://localhost:7205/api/Client')
           
