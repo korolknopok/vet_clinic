@@ -13,7 +13,7 @@ import Root from "./routes/root"
 import Contact from "./routes/contact";
 import {Route, Link, Routes} from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import List from "./components/List.js";
+
 
 
 

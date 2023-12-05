@@ -43,6 +43,7 @@ export default function Content() {
 
     setModalActive(false);
     };
+
     const [modalActive, setModalActive] = useState(false);
     return (
         <div className='content row' >
