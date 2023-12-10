@@ -97,7 +97,7 @@ export default function Content() {
                                 value={phoneNumber}
                                 onChange={(e) => setPhoneNumber(e.target.value)}
                             />
-                            <button id="btn" type="submit">Записаться</button>
+                            <button id="btn" type="submit" onClick={() => window.location.reload()}>Записаться</button>
                         </form>
                     </div>
                 </div>

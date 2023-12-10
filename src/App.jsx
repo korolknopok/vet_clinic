@@ -13,7 +13,6 @@ import Root from "./routes/root"
 import Contact from "./routes/contact";
 import {Route, Link, Routes} from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import ClientInfo from "./routes/ClientInfo.tsx";
 
 
 
@@ -41,7 +40,7 @@ export default function App() {
       <Routes>
         
         <Route path="/" element={<Content />} />
-        <Route path="/contact" element={<ClientInfo />} />
+        <Route path="/contact" element={<Contact />} />
         
       </Routes>
     </>
