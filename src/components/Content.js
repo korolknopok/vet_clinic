@@ -15,7 +15,7 @@ export default function Content() {
     // Создание объекта с данными для отправки
     const data = {
         name: name,
-        phone_number: phoneNumber,
+        phoneNumber: phoneNumber,
     };
 
     // Опции для Fetch API
