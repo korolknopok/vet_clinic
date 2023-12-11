@@ -7,6 +7,7 @@ import { type } from "os";
 
 interface IClientInfo {
     handleDeleteData: (id: string) => void;
+    
     post: {
         id : string;
         name: string;
@@ -14,14 +15,13 @@ interface IClientInfo {
     };
 }
 
-const ClientInfo: React.FC<IClientInfo> = ({handleDeleteData  , post}) =>  {
+const ClientInfo: React.FC<IClientInfo> = ({handleDeleteData , post}) =>  {
         
         return (
             <div >
                 {post.name}, {post.phoneNumber} 
                 <TiDelete className='styleIcons' onClick={() => {
                     handleDeleteData(post.id);
-                    window.location.reload();
                     }}></TiDelete>
             </div>
         );

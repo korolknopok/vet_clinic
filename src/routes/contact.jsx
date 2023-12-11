@@ -8,14 +8,35 @@ import ClientInfo from "../components/ClientInfo.tsx";
 
 function List() {
     const [data, setData] = useState([]);
-
-    useEffect(() => {
-        fetch('https://localhost:7205/api/Client')
-          
+    
+    const handleGetData = () => {
+        const optionsGet = {
+        
+            method: 'GET',
+            headers: {
+            'Content-Type': 'application/json',
+            },
+            
+        };
+    
+        fetch('https://localhost:7205/api/Client', optionsGet)
+            // .then(response => response.json())
+            // .then(json => setData(json))
+            // .catch(console.error);
             .then(response => response.json())
             .then(json => setData(json))
-            .catch(console.error);
+            .catch(error => {
+            // Обработка ошибок
+            console.error('Error:', error);
+        });
+
+        
+    }
+
+    useEffect(() => {
+        handleGetData();
     }, []);
+    
 
     const handleDeleteData = (id) => {
         
@@ -34,6 +55,7 @@ function List() {
                 if (response.ok) {
                 // Успешное удаление данных
                 console.log('Данные успешно удалены');
+                handleGetData();
                 } else {
                 // Обработка ошибки, если требуется
                 console.log('Ошибка при удалении данных');

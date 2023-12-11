@@ -9,7 +9,7 @@ import {
     createBrowserRouter,
     RouterProvider,
 } from "react-router-dom";
-import Root from "./routes/root"
+
 import Contact from "./routes/contact";
 import {Route, Link, Routes} from 'react-router-dom';
 import { useState, useEffect } from 'react';
@@ -21,9 +21,7 @@ export default function App() {
   
 
   return (
-    
     <>
-      
       <Header />
       <nav>
         <ul>
