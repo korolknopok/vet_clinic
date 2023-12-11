@@ -16,7 +16,6 @@ function List() {
             .then(json => setData(json))
             .catch(console.error);
     }, []);
-    
 
     const handleDeleteData = (id) => {
         
@@ -47,8 +46,6 @@ function List() {
     };
     
 
-    
-    
     return (
         <div>
             {data.map(post => 

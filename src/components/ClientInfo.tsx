@@ -5,9 +5,6 @@ import React, { Component } from 'react'
 import { TiDelete } from "react-icons/ti";
 import { type } from "os";
 
-
-
-
 const ClientInfo = ({handleDeleteData, post}) =>  {
 
         return (
