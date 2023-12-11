@@ -1,7 +1,6 @@
 import dog from '../img/dogLast.jpeg'
 import { useState } from 'react';
 import Modal from './Modal';
-import PostRequest from './PostQuyre';
 import React, { useEffect } from 'react';
 
 

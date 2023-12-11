@@ -1,8 +1,7 @@
-import { Form, Link } from "react-router-dom";
+
 import { useState } from 'react';
 import { useEffect } from 'react';
 import React, { Component } from 'react'
-import { TiDelete } from "react-icons/ti";
 import ClientInfo from "../components/ClientInfo.tsx";
 
 

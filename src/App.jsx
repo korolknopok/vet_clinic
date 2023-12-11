@@ -4,15 +4,9 @@ import Footer from "./components/Footer";
 import Header from "./components/Header.jsx";
 import Content from "./components/Content";
 import './css/index.css';
-import {
-  BrowserRouter,
-    createBrowserRouter,
-    RouterProvider,
-} from "react-router-dom";
-
 import Contact from "./routes/contact";
 import {Route, Link, Routes} from 'react-router-dom';
-import { useState, useEffect } from 'react';
+
 
 
 
@@ -41,6 +35,7 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         
       </Routes>
+      <Footer/>
     </>
     
   );
