@@ -15,39 +15,27 @@ function List() {
     
     const [data, setData] = useState([]);
 
-    useEffect(() => {
-        (async () => {
-            const response = await f.apiClientGet();
-            const { data } = response;
-            setData(data);
-        })();
-    }, []);
-    const handleGetData = () => {
+    async function getDataFromApi() {
+        const response = await f.apiClientGet();
+        const { data } = response;
+        setData(data);
     }
+    useEffect(() => {
+        getDataFromApi();
+    }, []);
 
     
-
     const handleDeleteData = (id) => {
-        
-        
-        const optionsDelete = {
-        
-            method: 'DELETE',
-            headers: {
-            'Content-Type': 'application/json',
-            },
-            
-        };
         console.log(id);
-        fetch('https://localhost:7205/api/Client/' + id, optionsDelete)
+        f.apiClientIdDelete(id)
             .then(response => {
-                if (response.ok) {
-                // Успешное удаление данных
-                console.log('Данные успешно удалены');
-                handleGetData();
+                if (response.status == 200) {
+                    // Успешное удаление данных
+                    console.log('Данные успешно удалены');
+                    getDataFromApi();
                 } else {
-                // Обработка ошибки, если требуется
-                console.log('Ошибка при удалении данных');
+                    // Обработка ошибки, если требуется
+                    console.log('Ошибка при удалении данных');
                 }
             })
             .catch(error => {

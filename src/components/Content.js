@@ -2,12 +2,13 @@ import dog from '../img/dogLast.jpeg'
 import { useState } from 'react';
 import Modal from './Modal';
 import React, { useEffect } from 'react';
+import { ClientApiFactory } from '../json/api.ts';
 
 
 export default function Content() {
     const [name, setName] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
-
+    var f = ClientApiFactory(); 
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -39,7 +40,6 @@ export default function Content() {
         // Обработка ошибок
         console.error('Error:', error);
         });
-
     setModalActive(false);
     };
 
