@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-
+import { RequestArgs } from "./json/base.ts";
 import {BrowserRouter} from 'react-router-dom';
 
 

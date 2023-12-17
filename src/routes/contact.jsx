@@ -1,40 +1,30 @@
 
 import { useState } from 'react';
 import { useEffect } from 'react';
+
 import React, { Component } from 'react'
 import ClientInfo from "../components/ClientInfo.tsx";
+import axios from 'axios';
+import {ClientApiAxiosParamCreator, ClientApiFactory } from '../json/api.ts';
 
+
+
+var f = ClientApiFactory(); 
 
 function List() {
+    
     const [data, setData] = useState([]);
-    
-    const handleGetData = () => {
-        const optionsGet = {
-        
-            method: 'GET',
-            headers: {
-            'Content-Type': 'application/json',
-            },
-            
-        };
-    
-        fetch('https://localhost:7205/api/Client', optionsGet)
-            // .then(response => response.json())
-            // .then(json => setData(json))
-            // .catch(console.error);
-            .then(response => response.json())
-            .then(json => setData(json))
-            .catch(error => {
-            // Обработка ошибок
-            console.error('Error:', error);
-        });
-
-        
-    }
 
     useEffect(() => {
-        handleGetData();
+        (async () => {
+            const response = await f.apiClientGet();
+            const { data } = response;
+            setData(data);
+        })();
     }, []);
+    const handleGetData = () => {
+    }
+
     
 
     const handleDeleteData = (id) => {
@@ -77,5 +67,6 @@ function List() {
         </div>
     );
 }
+
 
 export default List
