@@ -2,45 +2,46 @@ import dog from '../img/dogLast.jpeg'
 import { useState } from 'react';
 import Modal from './Modal';
 import React, { useEffect } from 'react';
-import { ClientApiFactory } from '../json/api.ts';
+import {ClientApiAxiosParamCreator, ClientApiFactory } from '../json/api.ts';
 
 
 export default function Content() {
     const [name, setName] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
-    var f = ClientApiFactory(); 
+    var f = ClientApiFactory();
     const handleSubmit = (e) => {
         e.preventDefault();
 
-    // Создание объекта с данными для отправки
-    const data = {
-        name: name,
-        phoneNumber: phoneNumber,
-    };
+        // Создание объекта с данными для отправки
+        const data = {
+            name: name,
+            phoneNumber: phoneNumber,
+        };
 
-    // Опции для Fetch API
-    const options = {
-        
-        method: 'POST',
-        headers: {
-        'Content-Type': 'application/json',
-        
-        },
-        body: JSON.stringify(data),
-    };
+        // Опции для Fetch API
+        const options = {
+            
+            method: 'POST',
+            headers: {
+            'Content-Type': 'application/json',
+            
+            },
+            body: JSON.stringify(data),
+        };
 
-    // Отправка запроса
-    fetch('https://localhost:7205/api/Client', options)
-        .then(response => response.json())
-        .then(data => {
-        // Обработка ответа сервера
-        console.log(data);
-        })
-        .catch(error => {
-        // Обработка ошибок
-        console.error('Error:', error);
-        });
-    setModalActive(false);
+        // Отправка запроса
+        f.apiClientPost(data)
+            .then(response => response.json())
+            .then(data => {
+            // Обработка ответа сервера
+            console.log(data);
+            })
+            .catch(error => {
+            // Обработка ошибок
+            console.error('Error:', error);
+            });
+
+        setModalActive(false);
     };
 
     const [modalActive, setModalActive] = useState(false);
@@ -105,5 +106,3 @@ export default function Content() {
     </div>
   )
 }
-
-

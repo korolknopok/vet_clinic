@@ -4,8 +4,9 @@ import Footer from "./components/Footer";
 import Header from "./components/Header.jsx";
 import Content from "./components/Content";
 import './css/index.css';
-import Contact from "./routes/contact";
+import Contact from "./routes/contact.jsx";
 import {Route, Link, Routes} from 'react-router-dom';
+
 
 
 

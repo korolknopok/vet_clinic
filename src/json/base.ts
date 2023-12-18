@@ -20,7 +20,7 @@ import type { AxiosPromise, AxiosInstance, AxiosRequestConfig } from 'axios';
 import globalAxios from 'axios';
 
 
-export const BASE_PATH = "https://localhost:7205".replace(/\/+$/, "");
+export const BASE_PATH = "https://localhost:7205/".replace(/\/+$/, "");
 
 /**
  *
